@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    font-size: 62.5%;
+    /*--linear-gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
+    --red /*(input errors)*/: hsl(0, 100%, 66%);
+
+    --white: hsl(0, 20%, 93%);
+    --light-grayish-violet: hsla(300, 4%, 60%, 0.53);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url(./images/bg-main-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.card-credit__front{
+    background-image: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40rem;
+    height: 20rem;
+    padding: 2rem;
+    margin-right: 14rem;
+}
+
+.logoFrontCard{
+    margin-bottom: 4rem;
+}
+
+.front__number{
+    color: var(--white);
+    font-size: 2.5rem;
+    letter-spacing: .25rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.front__content--personaldate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 89%;
+    margin-top: 1.5rem;
+}
+
+.personaldate__name{
+    font-size: 1.25rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.exp-date{
+    letter-spacing: .25rem;
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.card-credit__back{
+    background-image: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40rem;
+    height: 20rem;
+    position: relative;
+    margin-right: 2.25rem;
+
+}
+.cvc{
+    position: absolute;
+    bottom: 9.25rem;
+    right: 7.25rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.box-formulario{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.form-cardholder,.form-cardNumber,.form-cardexp,.form-cvc{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    margin-bottom: .5rem;
+    letter-spacing: .15rem;
+}
+
+.input-normal{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--light-grayish-violet);
+    margin-bottom: 2rem;
+}
+.input-normal::placeholder,.input-min::placeholder,#cvc::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.input-min{
+    width: 80%;
+    padding: .75rem;
+    border-radius: 6px;
+    border: 1px solid var(--light-grayish-violet);
+}
+
+.securitydate{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.expMonths{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.month-expirate{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.cvcForm{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#cvc{
+    padding: .75rem;
+    border-radius: 6px;
+    border: 1px solid var(--light-grayish-violet);
+}
+
+.button-confirm{
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    padding: 1.25rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    margin-top: 3rem;
+}
