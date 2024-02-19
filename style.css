@@ -17,15 +17,30 @@
 }
 
 body{
-    height: 100vh;
+    
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+body::after{
+    content: "";
     background-image: url(./images/bg-main-desktop.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    width: 33.5%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    transition: width .35s ease-in-out,height .35s ease-in-out;
+}
+
+.root{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
 }
 
 .card{
@@ -37,14 +52,16 @@ body{
     gap: 3rem;
 }
 
+
 .card-credit__front{
     background-image: url(./images/bg-card-front.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 40rem;
-    height: 20rem;
+    background-size: cover;
+    min-width: 37rem;
     padding: 2rem;
-    margin-right: 14rem;
+    margin: 0 0 5rem 5rem;
+    border-radius: 10px;
+    transform: scale(1.2);
 }
 
 .logoFrontCard{
@@ -64,7 +81,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 89%;
     margin-top: 1.5rem;
 }
 
@@ -78,6 +94,7 @@ body{
 .exp-date{
     letter-spacing: .25rem;
     font-size: 1.25rem;
+    margin-right: .45rem;
     color: var(--white);
 }
 
@@ -88,7 +105,9 @@ body{
     width: 40rem;
     height: 20rem;
     position: relative;
-    margin-right: 2.25rem;
+    margin-left: 30rem;
+    border-radius: 10px;
+    transform: scale(1.2);
 
 }
 .cvc{
